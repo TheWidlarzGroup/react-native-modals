@@ -14,6 +14,8 @@
 		3466E1405525D3D3690B57C7 /* libPods-RNModals.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C65CA9845EAA1AC01D542767 /* libPods-RNModals.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		C9ECCC30230DEB5ABB63A4B1 /* libPods-RNModals-RNModalsTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9262176C5321CDA9718D90B3 /* libPods-RNModals-RNModalsTests.a */; };
+		ED126609267BA8620024ADD1 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED126608267BA8620024ADD1 /* Ionicons.ttf */; };
+		ED12660C267BA86B0024ADD1 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = ED126608267BA8620024ADD1 /* Ionicons.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +45,7 @@
 		9262176C5321CDA9718D90B3 /* libPods-RNModals-RNModalsTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNModals-RNModalsTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA656FA15F25E0BDA727EA0D /* Pods-RNModals.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RNModals.release.xcconfig"; path = "Target Support Files/Pods-RNModals/Pods-RNModals.release.xcconfig"; sourceTree = "<group>"; };
 		C65CA9845EAA1AC01D542767 /* libPods-RNModals.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RNModals.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED126608267BA8620024ADD1 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Ionicons.ttf; path = "../../node_modules/react-native-vector-icons/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -104,7 +107,6 @@
 				842AB123D60A0C46E28AA858 /* Pods-RNModals-RNModalsTests.debug.xcconfig */,
 				550D298A06B4ED7A4CB0ACB0 /* Pods-RNModals-RNModalsTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +130,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				ED126607267BA7C00024ADD1 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* RNModals */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* RNModalsTests */,
@@ -147,6 +150,14 @@
 				00E356EE1AD99517003FC87E /* RNModalsTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		ED126607267BA7C00024ADD1 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				ED126608267BA8620024ADD1 /* Ionicons.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +247,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED12660C267BA86B0024ADD1 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -245,6 +257,7 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				ED126609267BA8620024ADD1 /* Ionicons.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
