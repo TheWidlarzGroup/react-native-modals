@@ -7,11 +7,13 @@ import ButtonComponent from '../Button/ButtonComponent';
 
 interface Props {
   hideModal: () => void;
+  hideCloseButton?: boolean;
   style?: StyleProp<ViewStyle>;
 }
 
 const ModalComponent = ({
   hideModal,
+  hideCloseButton,
   style,
   children,
   ...props
@@ -20,11 +22,13 @@ const ModalComponent = ({
     <Modal {...props}>
       <View style={[styles.modal, style]}>
         <Text style={styles.text}>Place for your content</Text>
-        <ButtonComponent
-          title="Close"
-          style={styles.closeButton}
-          onClick={hideModal}
-        />
+        {!hideCloseButton && (
+          <ButtonComponent
+            title="Close"
+            style={styles.closeButton}
+            onClick={hideModal}
+          />
+        )}
         {children}
       </View>
     </Modal>

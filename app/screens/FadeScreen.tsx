@@ -1,10 +1,12 @@
 import React, {useState} from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
+import {theme} from '../theme/theme';
 
 import ButtonComponent from '../components/Button/ButtonComponent';
 import ModalComponent from '../components/Modal/ModalComponent';
 
 const width = Dimensions.get('window').width;
+const heigth = Dimensions.get('window').height;
 
 const FadeScreen = () => {
   const [showFirstModal, setShowFirstModal] = useState(false);
@@ -14,7 +16,10 @@ const FadeScreen = () => {
 
   return (
     <View style={styles.container}>
-      <ButtonComponent onClick={() => setShowFirstModal(true)} />
+      <ButtonComponent
+        onClick={() => setShowFirstModal(true)}
+        style={styles.buttonTopLeft}
+      />
       <ModalComponent
         isVisible={showFirstModal}
         onBackdropPress={() => setShowFirstModal(false)}
@@ -24,7 +29,10 @@ const FadeScreen = () => {
         animationOut="fadeOutUp"
       />
 
-      <ButtonComponent onClick={() => setShowSecondModal(true)} />
+      <ButtonComponent
+        onClick={() => setShowSecondModal(true)}
+        style={styles.buttonTopRight}
+      />
       <ModalComponent
         isVisible={showSecondModal}
         onBackdropPress={() => setShowSecondModal(false)}
@@ -35,7 +43,10 @@ const FadeScreen = () => {
         style={styles.smallModal}
       />
 
-      <ButtonComponent onClick={() => setShowThirdModal(true)} />
+      <ButtonComponent
+        onClick={() => setShowThirdModal(true)}
+        style={styles.buttonBottomLeft}
+      />
       <ModalComponent
         isVisible={showThirdModal}
         onBackdropPress={() => setShowThirdModal(false)}
@@ -46,7 +57,10 @@ const FadeScreen = () => {
         backdropOpacity={1}
       />
 
-      <ButtonComponent onClick={() => setShowFourthModal(true)} />
+      <ButtonComponent
+        onClick={() => setShowFourthModal(true)}
+        style={styles.buttonBottomRight}
+      />
       <ModalComponent
         isVisible={showFourthModal}
         onBackdropPress={() => setShowFourthModal(false)}
@@ -64,8 +78,26 @@ const FadeScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'space-evenly',
+  },
+  buttonTopLeft: {
+    position: 'absolute',
+    top: heigth / 3 - theme.buttons.standardHeight / 2,
+    left: width / 4 - theme.buttons.standardWidth / 2,
+  },
+  buttonTopRight: {
+    position: 'absolute',
+    top: heigth / 3 - theme.buttons.standardHeight / 2,
+    right: width / 4 - theme.buttons.standardWidth / 2,
+  },
+  buttonBottomLeft: {
+    position: 'absolute',
+    top: heigth - heigth / 3 - theme.buttons.standardHeight / 2,
+    left: width / 4 - theme.buttons.standardWidth / 2,
+  },
+  buttonBottomRight: {
+    position: 'absolute',
+    top: heigth - heigth / 3 - theme.buttons.standardHeight / 2,
+    right: width / 4 - theme.buttons.standardWidth / 2,
   },
   smallModal: {
     flex: 1 / 3,

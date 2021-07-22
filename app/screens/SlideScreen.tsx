@@ -66,6 +66,7 @@ const SlideScreen = () => {
         animationInTiming={500}
         animationOut="bounceOutRight"
         animationOutTiming={500}
+        backdropTransitionOutTiming={500}
         backdropOpacity={1}
         style={styles.rightModal}
       />
@@ -82,7 +83,9 @@ const SlideScreen = () => {
         onSwipeComplete={() => setShowFourthModal(false)}
         hideModal={() => setShowFourthModal(false)}
         animationIn="bounceInUp"
+        animationInTiming={500}
         animationOut="bounceOutDown"
+        animationOutTiming={500}
         style={styles.bottomModal}
       />
     </View>
