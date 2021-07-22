@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     height: theme.buttons.smallHeight,
   },
   modal: {
-    flex: 1,
+    flex: 3 / 4,
     justifyContent: 'center',
     alignItems: 'center',
     backgroundColor: theme.colors.white,

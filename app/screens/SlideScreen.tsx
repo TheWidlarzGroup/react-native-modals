@@ -26,9 +26,10 @@ const SlideScreen = () => {
         onBackButtonPress={() => setShowFirstModal(false)}
         swipeDirection="up"
         onSwipeComplete={() => setShowFirstModal(false)}
+        hideModal={() => setShowFirstModal(false)}
         animationIn="slideInDown"
         animationOut="slideOutUp"
-        hideModal={() => setShowFirstModal(false)}
+        style={styles.topModal}
       />
 
       <ButtonComponent
@@ -41,9 +42,13 @@ const SlideScreen = () => {
         onBackButtonPress={() => setShowSecondModal(false)}
         swipeDirection="left"
         onSwipeComplete={() => setShowSecondModal(false)}
-        animationIn="slideInLeft"
-        animationOut="slideOutLeft"
         hideModal={() => setShowSecondModal(false)}
+        animationIn="slideInLeft"
+        animationInTiming={800}
+        backdropTransitionInTiming={800}
+        animationOut="slideOutLeft"
+        animationOutTiming={800}
+        backdropTransitionOutTiming={800}
       />
 
       <ButtonComponent
@@ -56,9 +61,13 @@ const SlideScreen = () => {
         onBackButtonPress={() => setShowThirdModal(false)}
         swipeDirection="right"
         onSwipeComplete={() => setShowThirdModal(false)}
-        animationIn="slideInRight"
-        animationOut="slideOutRight"
         hideModal={() => setShowThirdModal(false)}
+        animationIn="bounceInRight"
+        animationInTiming={500}
+        animationOut="bounceOutRight"
+        animationOutTiming={500}
+        backdropOpacity={1}
+        style={styles.rightModal}
       />
 
       <ButtonComponent
@@ -71,9 +80,10 @@ const SlideScreen = () => {
         onBackButtonPress={() => setShowFourthModal(false)}
         swipeDirection="down"
         onSwipeComplete={() => setShowFourthModal(false)}
-        animationIn="slideInUp"
-        animationOut="slideOutDown"
         hideModal={() => setShowFourthModal(false)}
+        animationIn="bounceInUp"
+        animationOut="bounceOutDown"
+        style={styles.bottomModal}
       />
     </View>
   );
@@ -102,6 +112,20 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: heigth - heigth / 5 - theme.buttons.standardHeight / 2,
     left: width / 2 - theme.buttons.standardWidth / 2,
+  },
+  topModal: {
+    flex: 1 / 3,
+  },
+  rightModal: {
+    flex: 1,
+  },
+  bottomModal: {
+    height: 150,
+    width: width - 20,
+    position: 'absolute',
+    bottom: -10,
+    left: -10,
+    borderRadius: 10,
   },
 });
 
