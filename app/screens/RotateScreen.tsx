@@ -1,19 +1,64 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import {theme} from '../theme/theme';
 
 import ButtonComponent from '../components/Button/ButtonComponent';
+import ModalComponent from '../components/Modal/ModalComponent';
 
 const width = Dimensions.get('window').width;
 const heigth = Dimensions.get('window').height;
 
 const RotateScreen = () => {
+  const [showFirstModal, setShowFirstModal] = useState(false);
+  const [showSecondModal, setShowSecondModal] = useState(false);
+  const [showThirdModal, setShowThirdModal] = useState(false);
+  const [showFourthModal, setShowFourthModal] = useState(false);
+
   return (
     <View style={styles.container}>
-      <ButtonComponent title="Modal" style={styles.buttonTopLeft} />
-      <ButtonComponent title="Modal" style={styles.buttonTopRight} />
-      <ButtonComponent title="Modal" style={styles.buttonBottomLeft} />
-      <ButtonComponent title="Modal" style={styles.buttonBottomRight} />
+      <ButtonComponent
+        style={styles.buttonTopLeft}
+        onClick={() => setShowFirstModal(true)}
+      />
+      <ModalComponent
+        isVisible={showFirstModal}
+        onBackdropPress={() => setShowFirstModal(false)}
+        onBackButtonPress={() => setShowFirstModal(false)}
+        hideModal={() => setShowFirstModal(false)}
+      />
+
+      <ButtonComponent
+        style={styles.buttonTopRight}
+        onClick={() => setShowSecondModal(true)}
+      />
+      <ModalComponent
+        isVisible={showSecondModal}
+        onBackdropPress={() => setShowSecondModal(false)}
+        onBackButtonPress={() => setShowSecondModal(false)}
+        hideModal={() => setShowSecondModal(false)}
+      />
+
+      <ButtonComponent
+        style={styles.buttonBottomLeft}
+        onClick={() => setShowThirdModal(true)}
+      />
+      <ModalComponent
+        isVisible={showThirdModal}
+        onBackdropPress={() => setShowThirdModal(false)}
+        onBackButtonPress={() => setShowThirdModal(false)}
+        hideModal={() => setShowThirdModal(false)}
+      />
+
+      <ButtonComponent
+        style={styles.buttonBottomRight}
+        onClick={() => setShowFourthModal(true)}
+      />
+      <ModalComponent
+        isVisible={showFourthModal}
+        onBackdropPress={() => setShowFourthModal(false)}
+        onBackButtonPress={() => setShowFourthModal(false)}
+        hideModal={() => setShowFourthModal(false)}
+      />
     </View>
   );
 };

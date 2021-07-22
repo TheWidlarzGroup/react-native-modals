@@ -10,12 +10,12 @@ import {
 import {theme} from '../../theme/theme';
 
 interface Props {
-  title: string;
+  title?: string;
   style?: StyleProp<ViewStyle>;
   onClick?: () => void;
 }
 
-const ButtonComponent = ({title, style, onClick}: Props) => {
+const ButtonComponent = ({title = 'Modal', style, onClick}: Props) => {
   return (
     <TouchableOpacity onPress={onClick} style={[styles.button, style]}>
       <View>
@@ -29,8 +29,6 @@ const styles = StyleSheet.create({
   button: {
     width: theme.buttons.standardWidth,
     height: theme.buttons.standardHeight,
-    paddingVertical: 5,
-    paddingHorizontal: 10,
     justifyContent: 'center',
     alignItems: 'center',
     borderWidth: 1,

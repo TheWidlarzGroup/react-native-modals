@@ -6,8 +6,8 @@ import ButtonComponent from '../components/Button/ButtonComponent';
 const ExtraScreen = () => {
   return (
     <View style={styles.container}>
-      <ButtonComponent title="Modal" />
-      <ButtonComponent title="Modal" />
+      <ButtonComponent />
+      <ButtonComponent />
     </View>
   );
 };
