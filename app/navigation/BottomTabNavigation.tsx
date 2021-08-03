@@ -6,7 +6,7 @@ import {theme} from '../theme/theme';
 import SlideScreen from '../screens/SlideScreen';
 import FadeScreen from '../screens/FadeScreen';
 import RotateScreen from '../screens/RotateScreen';
-import ExtraScreen from '../screens/ExtraScreen';
+import UtilsScreen from '../screens/UtilsScreen';
 
 const Tab = createBottomTabNavigator();
 
@@ -62,13 +62,13 @@ const BottomTabNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="Extra"
-        component={ExtraScreen}
+        name="Utils"
+        component={UtilsScreen}
         options={{
           tabBarIcon: ({focused}) => {
             return (
               <Icons
-                name={focused ? 'star' : 'star-outline'}
+                name={focused ? 'construct' : 'construct-outline'}
                 size={theme.iconSizes.bottomTab}
               />
             );

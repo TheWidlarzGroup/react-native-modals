@@ -5,7 +5,7 @@ import ButtonComponent from '../components/Button/ButtonComponent';
 import ConfirmationWrapper from '../components/ConfirmationWrapper/ConfirmationWrapper';
 import SwipePicker from '../components/SwipePicker/SwipePicker';
 
-const ExtraScreen = () => {
+const UtilsScreen = () => {
   const [showSwipePicker, setShowSwipePicker] = useState(false);
 
   return (
@@ -34,4 +34,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ExtraScreen;
+export default UtilsScreen;
