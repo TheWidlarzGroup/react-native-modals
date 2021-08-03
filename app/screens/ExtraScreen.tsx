@@ -1,12 +1,17 @@
 import React from 'react';
-import {View, StyleSheet} from 'react-native';
+import {View, StyleSheet, Alert} from 'react-native';
 
 import ButtonComponent from '../components/Button/ButtonComponent';
+import ConfirmationWrapper from '../components/ConfirmationWrapper/ConfirmationWrapper';
 
 const ExtraScreen = () => {
   return (
     <View style={styles.container}>
-      <ButtonComponent />
+      <ConfirmationWrapper
+        onConfirm={() => Alert.alert('Your action was confirmed!')}>
+        <ButtonComponent />
+      </ConfirmationWrapper>
+
       <ButtonComponent />
     </View>
   );
