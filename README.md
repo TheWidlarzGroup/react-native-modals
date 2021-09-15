@@ -12,8 +12,9 @@ Run the playground and play with it on `master` branch, or checkout to `starter`
 
 1. Clone repository
 2. Run `yarn`
-3. For ios move into `cd ios` and run `pod install`
+3. For ios move to `cd ios` and run `pod install`
 4. Run it on ios/android simulator or any physical device
+5. Enjoy! 🙂
 
 ## Sneak peak
 
