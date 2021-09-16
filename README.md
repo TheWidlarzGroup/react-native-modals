@@ -18,4 +18,4 @@ Run the playground and play with it on `master` branch, or checkout to `starter`
 
 ## Sneak peak
 
-![](./app/assets/sneak-peak.gif)
+![](./src/assets/sneak-peak.gif)
