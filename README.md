@@ -2,7 +2,7 @@
 
 ## About
 
-This repository is a playground for article about react-native modals which you can find on https://thewidlarzgroup.com/blog.
+This repository is a playground for article about react-native modals which you can find on https://thewidlarzgroup.com/react-native-modals/.
 
 This is an introduction to modals world. It contains examples of cool looking, fast and functional modal components, which you can freely implement into your project.
 
