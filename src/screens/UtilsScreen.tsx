@@ -1,29 +1,14 @@
-import React, {useState} from 'react';
-import {View, StyleSheet, Alert} from 'react-native';
+import React from 'react';
+import {View, StyleSheet} from 'react-native';
 
-import ButtonComponent from '../components/Button/ButtonComponent';
-import ConfirmationWrapper from '../components/ConfirmationWrapper/ConfirmationWrapper';
-import SwipePicker from '../components/SwipePicker/SwipePicker';
+// uncomment for modal implementation
+// import ButtonComponent from '../components/Button/ButtonComponent';
 
 const UtilsScreen = () => {
-  const [showSwipePicker, setShowSwipePicker] = useState(false);
+  // uncomment for SwipePicker modal implementation and import useState from React
+  // const [showSwipePicker, setShowSwipePicker] = useState(false);
 
-  return (
-    <View style={styles.container}>
-      <ConfirmationWrapper
-        onConfirm={() => Alert.alert('Your action was confirmed!')}>
-        <ButtonComponent />
-      </ConfirmationWrapper>
-
-      <ButtonComponent onClick={() => setShowSwipePicker(true)} />
-      <SwipePicker
-        isVisible={showSwipePicker}
-        hideModal={() => setShowSwipePicker(false)}
-        swipeLeftAction={() => Alert.alert('You swiped left!')}
-        swipeRightAction={() => Alert.alert('You swiped right!')}
-      />
-    </View>
-  );
+  return <View style={styles.container} />;
 };
 
 const styles = StyleSheet.create({

@@ -1,62 +1,29 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 
 import ButtonComponent from '../components/Button/ButtonComponent';
-import ModalComponent from '../components/Modal/ModalComponent';
+// uncomment for modal implementation
+// import ModalComponent from '../components/Modal/ModalComponent';
 
 const width = Dimensions.get('window').width;
 const heigth = Dimensions.get('window').height;
 
 const RotateScreen = () => {
-  const [showFirstModal, setShowFirstModal] = useState(false);
-  const [showSecondModal, setShowSecondModal] = useState(false);
-  const [showThirdModal, setShowThirdModal] = useState(false);
+  // uncomment needed state for modal implementation and import useState from React
+  // const [showFirstModal, setShowFirstModal] = useState(false);
+  // const [showSecondModal, setShowSecondModal] = useState(false);
+  // const [showThirdModal, setShowThirdModal] = useState(false);
 
   return (
     <View style={styles.container}>
-      <ButtonComponent onClick={() => setShowFirstModal(true)} />
-      <ModalComponent
-        isVisible={showFirstModal}
-        onBackdropPress={() => setShowFirstModal(false)}
-        onBackButtonPress={() => setShowFirstModal(false)}
-        hideModal={() => setShowFirstModal(false)}
-        animationIn="rotate"
-        animationInTiming={500}
-        animationOut="slideOutRight"
-        backdropOpacity={0.8}
-        backdropTransitionOutTiming={500}
+      <ButtonComponent
+      // onClick={() => setShowFirstModal(true)}
       />
-
-      <ButtonComponent onClick={() => setShowSecondModal(true)} />
-      <ModalComponent
-        isVisible={showSecondModal}
-        hideCloseButton
-        onBackdropPress={() => setShowSecondModal(false)}
-        onBackButtonPress={() => setShowSecondModal(false)}
-        hideModal={() => setShowSecondModal(false)}
-        animationIn="rotate"
-        animationInTiming={600}
-        animationOut="slideOutDown"
-        backdropTransitionInTiming={600}
-        backdropOpacity={0.7}
-        style={styles.circleBottomRightModal}
+      <ButtonComponent
+      // onClick={() => setShowSecondModal(true)}
       />
-
-      <ButtonComponent onClick={() => setShowThirdModal(true)} />
-      <ModalComponent
-        isVisible={showThirdModal}
-        hideCloseButton
-        onBackdropPress={() => setShowThirdModal(false)}
-        onBackButtonPress={() => setShowThirdModal(false)}
-        hideModal={() => setShowThirdModal(false)}
-        animationIn="rotate"
-        animationInTiming={500}
-        animationOut="rotate"
-        animationOutTiming={500}
-        style={styles.circleCenteredModal}
-        backdropOpacity={1}
-        backdropTransitionInTiming={500}
-        backdropTransitionOutTiming={500}
+      <ButtonComponent
+      // onClick={() => setShowThirdModal(true)}
       />
     </View>
   );

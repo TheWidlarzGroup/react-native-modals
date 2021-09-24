@@ -1,92 +1,42 @@
-import React, {useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, Dimensions} from 'react-native';
 import {theme} from '../theme/theme';
 
 import ButtonComponent from '../components/Button/ButtonComponent';
-import ModalComponent from '../components/Modal/ModalComponent';
+// uncomment for modal implementation
+// import ModalComponent from '../components/Modal/ModalComponent';
 
 const width = Dimensions.get('window').width;
 const heigth = Dimensions.get('window').height;
 
 const SlideScreen = () => {
-  const [showFirstModal, setShowFirstModal] = useState(false);
-  const [showSecondModal, setShowSecondModal] = useState(false);
-  const [showThirdModal, setShowThirdModal] = useState(false);
-  const [showFourthModal, setShowFourthModal] = useState(false);
+  // uncomment needed state for modal implementation and import useState from React
+  // const [showFirstModal, setShowFirstModal] = useState(false);
+  // const [showSecondModal, setShowSecondModal] = useState(false);
+  // const [showThirdModal, setShowThirdModal] = useState(false);
+  // const [showFourthModal, setShowFourthModal] = useState(false);
 
   return (
     <View style={styles.container}>
       <ButtonComponent
         style={styles.buttonTop}
-        onClick={() => setShowFirstModal(true)}
+        // uncomment for modal implementation
+        // onClick={() => setShowFirstModal(true)}
       />
-      <ModalComponent
-        isVisible={showFirstModal}
-        onBackdropPress={() => setShowFirstModal(false)}
-        onBackButtonPress={() => setShowFirstModal(false)}
-        swipeDirection="up"
-        onSwipeComplete={() => setShowFirstModal(false)}
-        hideModal={() => setShowFirstModal(false)}
-        animationIn="slideInDown"
-        animationOut="slideOutUp"
-        style={styles.topModal}
-      />
-
       <ButtonComponent
         style={styles.buttonLeft}
-        onClick={() => setShowSecondModal(!showSecondModal)}
+        // uncomment for modal implementation
+        // onClick={() => setShowSecondModal(true)}
       />
-      <ModalComponent
-        isVisible={showSecondModal}
-        onBackdropPress={() => setShowSecondModal(false)}
-        onBackButtonPress={() => setShowSecondModal(false)}
-        swipeDirection="left"
-        onSwipeComplete={() => setShowSecondModal(false)}
-        hideModal={() => setShowSecondModal(false)}
-        animationIn="slideInLeft"
-        animationInTiming={800}
-        backdropTransitionInTiming={800}
-        animationOut="slideOutLeft"
-        animationOutTiming={800}
-        backdropTransitionOutTiming={800}
-      />
-
       <ButtonComponent
         style={styles.buttonRight}
-        onClick={() => setShowThirdModal(!showThirdModal)}
+        // uncomment for modal implementation
+        // onClick={() => setShowThirdModal(true)}
       />
-      <ModalComponent
-        isVisible={showThirdModal}
-        onBackdropPress={() => setShowThirdModal(false)}
-        onBackButtonPress={() => setShowThirdModal(false)}
-        swipeDirection="right"
-        onSwipeComplete={() => setShowThirdModal(false)}
-        hideModal={() => setShowThirdModal(false)}
-        animationIn="bounceInRight"
-        animationInTiming={500}
-        animationOut="bounceOutRight"
-        animationOutTiming={500}
-        backdropTransitionOutTiming={500}
-        backdropOpacity={1}
-        style={styles.rightModal}
-      />
-
       <ButtonComponent
         style={styles.buttonBottom}
-        onClick={() => setShowFourthModal(!showFourthModal)}
-      />
-      <ModalComponent
-        isVisible={showFourthModal}
-        onBackdropPress={() => setShowFourthModal(false)}
-        onBackButtonPress={() => setShowFourthModal(false)}
-        swipeDirection="down"
-        onSwipeComplete={() => setShowFourthModal(false)}
-        hideModal={() => setShowFourthModal(false)}
-        animationIn="bounceInUp"
-        animationInTiming={500}
-        animationOut="bounceOutDown"
-        animationOutTiming={500}
-        style={styles.bottomModal}
+        // uncomment for modal implementation
+        // onClick={() => setShowFourthModal(true)}
       />
     </View>
   );
