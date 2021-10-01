@@ -16,6 +16,6 @@ Run the playground and play with it on `master` branch, or checkout to `starter`
 4. Run it on ios/android simulator or any physical device
 5. Enjoy! 🙂
 
-## Sneak peak
+## Sneak peek
 
 ![](./src/assets/sneak-peak.gif)
